@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reflect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <meta name="description" content="Сайт-візитка додатку організації робочих нотаток">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div id="trialModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Спробуйте Reflect</h2>
+        <p>Заповніть форму, щоб спробувати Reflect зараз!</p>
+        <form>
+            <input type="text" placeholder="Ваше ім'я" required><br>
+            <input type="email" placeholder="Ваш email" required><br>
+            <button type="submit" class="btn-submit">Подати заявку</button>
+        </form>
+    </div>
+</div>
+<header>
+    <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Reflect Logo">
+    </a>
+    <nav>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="#">Ціни</a></li>
+            <li><a href="company.html">Компанія</a></li>
+            <li><a href="blog.html">Блог</a></li>
+        </ul>
+    </nav>
+    <div class="btn-block">
+        <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+        <a href="#" class="btn-trial"  id="openModal">Спробуй</a>
+    </div>
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<section class="pricing">
+    <div class="container">
+        <h1>Наші Тарифи</h1>
+        <p>Обирайте план, що найкраще відповідає вашим потребам.</p>
+        <div class="pricing-cards">
+            <div class="pricing-card">
+                <h2>Базовий</h2>
+                <p>$10/місяць</p>
+                <ul>
+                    <li>Доступ до базових функцій</li>
+                    <li>Обмежений простір</li>
+                    <li>Підтримка по email</li>
+                </ul>
+                <button class="btn-trial">Обрати</button>
+            </div>
+            <div class="pricing-card">
+                <h2>Стандартний</h2>
+                <p>$20/місяць</p>
+                <ul>
+                    <li>Усі базові функції</li>
+                    <li>Розширений простір</li>
+                    <li>Пріоритетна підтримка</li>
+                </ul>
+                <button class="btn-trial">Обрати</button>
+            </div>
+            <div class="pricing-card">
+                <h2>Преміум</h2>
+                <p>$30/місяць</p>
+                <ul>
+                    <li>Усі стандартні функції</li>
+                    <li>Необмежений простір</li>
+                    <li>Підтримка 24/7</li>
+                </ul>
+                <button class="btn-trial">Обрати</button>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="faq">
+    <div class="container">
+        <h2>Поширені запитання</h2>
+        <div class="faq-item">
+            <h3>Як я можу змінити план?</h3>
+            <p>Щоб змінити план, зайдіть в налаштування облікового запису, де буде доступна опція зміни тарифу. Ви можете змінити план в будь-який час.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Чи є пробний період?</h3>
+            <p>Так, ми пропонуємо безкоштовний пробний період на 7 днів для всіх планів, щоб ви могли спробувати наші послуги без жодних зобов'язань.</p>
+        </div>
+        <div class="faq-item">
+            <h3>Чи є знижки на довгострокові підписки?</h3>
+            <p>Так, для довгострокових підписок ми надаємо знижки до 20%. Підписатися на річний план можна безпосередньо в налаштуваннях.</p>
+        </div>
+    </div>
+</section>
+<section class="section-read section-comments">
+    <div class="badge">Стіна кохання</div>
+    <h2>Улюблений мислителями</h2>
+    <p>Ось що люди говорять про нас</p>
+    <div class="comments-block swiper">
+        <div class="swiper-wrapper">
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men.png" alt="img">
+                    <div>
+                        <h3>Райан Делк</h3>
+                        <p>@delk</p>
+                    </div>
+                </div>
+                <p>Не віднімайте це від мене:
+                    <span class="purple">@reflectnotes</span> — це магія.</p>
+            </div>
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men2.png" alt="img">
+                    <div>
+                        <h3>Шон Роуз</h3>
+                        <p>@seanrose</p>
+                    </div>
+                </div>
+                <p>Наразі дуже, дуже подобається
+                    <span class="purple">@reflectnotes</span>. Це просто
+                    потрібну кількість простих/швидких для особистих нотаток
+                    і виконує більшу частину важкої роботи з організації в
+                    фон.</p>
+            </div>
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men3.png" alt="img">
+                    <div>
+                        <h3>Деметрія Джайлз</h3>
+                        <p>@drosewritings</p>
+                    </div>
+                </div>
+                <p>
+                    Граємося з <span class="purple">@reflectnotes</span>.
+                    Я повернувся до реєстраційного ключа
+                    думки, деталі та звукові фрагменти з епізодів, книг,
+                    зустрічі, статті тощо за минулий тиждень.</p>
+            </div>
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men4.png" alt="img">
+                    <div>
+                        <h3>Джеремі МакПік</h3>
+                        <p>@jwmcpeak</p>
+                    </div>
+                </div>
+                <p>Я щойно отримав запрошення до <span class="purple">@reflectnotes</span>,
+                    і о боже! Це добре продумано, і я бачу, що це моя замітка -
+                    беручи платформу вперед. молодець! я шукаю
+                    дивіться, як прогресує програма.</p>
+            </div>
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men5.png" alt="img">
+                    <div>
+                        <h3>Фабріціо Рінальді</h3>
+                        <p>@linuz90</p>
+                    </div>
+                </div>
+                <p>Я тримаю <span class="purple">@reflectnotes</span>
+                    відкритим *увесь* час, і я використання як для
+                    простого журналювання, так і для написання довгих
+                    форм. Рідко можна побачити, як одна програма так добре
+                    працює для обох.</p>
+            </div>
+            <div class="comment-card swiper-slide">
+                <div class="commentator">
+                    <img src="img/men6.png" alt="img">
+                    <div>
+                        <h3>Джонатан Сімко</h3>
+                        <p>@jdsimcoe</p>
+                    </div>
+                </div>
+                <p>Все правильно. Я маю віддати величезне вітання
+                    <span class="purple">@maccaw</span> за новаторство <span class="purple">@reflectnotes</span>.
+                    Швидкість, фокус і увага до деталей (особливо
+                    ідеальних фрагментів структурованих даних) чудові.</p>
+            </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Reflect Logo">
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-discord" style="color: #4C485E;"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #4C485E;"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Продукти</h3>
+                    <ul>
+                        <li><a href="#">Особливості</a></li>
+                        <li><a href="#">Інтеграції</a></li>
+                        <li><a href="#">Ціни</a></li>
+                        <li><a href="#">Журнал змін</a></li>
+                        <li><a href="#">Шлях</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Компанія</h3>
+                    <ul>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Наші числа</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурси</h3>
+                    <ul>
+                        <li><a href="#">Завантаження</a></li>
+                        <li><a href="#">Документація</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-newsletter">
+            <div>
+                <h3>Приєднуйтесь до нашої розсилки</h3>
+                <p>Будьте в курсі всього Reflect</p>
+            </div>
+            <form>
+                <input type="email" placeholder="Введіть емейл">
+                <a href="#" class="view-btn">Підписатися</a>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p><a href="#">Privacy Policy</a><span>&#9679;</span><a href="#">Terms of Conditions</a></p>
+            <p>Reflect App, LLC. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script/script.js"></script>
+</body>
+</html>

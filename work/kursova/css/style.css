@@ -1,0 +1,1084 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background: #030014;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    color: #fff;
+    position: relative;
+    max-width: 1296px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 50px 0;
+    position: absolute;
+    top: 86px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #0a0333;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    width: 100%;
+    z-index: 100;
+}
+
+.menu li {
+    margin: 0;
+    padding: 10px 20px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+}
+
+.burger {
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 30px;
+    height: 25px;
+    position: relative;
+    z-index: 10;
+}
+
+.burger span {
+    height: 3px;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+.burger.open span:nth-child(1) {
+    transform: rotate(45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.burger.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.burger.open span:nth-child(3) {
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 10px;
+}
+
+.btn-block a {
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.btn-block a:first-child {
+    margin-right: 5px;
+}
+
+.btn-trial {
+    border-radius: 8px;
+    background: #6D5A99;
+    padding: 12px 13px;
+}
+
+.btn-trial:hover, .trial-button:hover, .view-btn:hover {
+    background-color: #c088ff;
+}
+
+/* Стилі для модального вікна */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #6D5A99;
+    padding: 50px 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 350px;
+    max-width: 90%;
+    position: relative;
+}
+
+.close-btn {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal form {
+    margin-top: 20px;
+}
+
+.modal input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.modal .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #4C485E;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.modal .btn-submit:hover {
+    background-color: #283655;
+}
+
+/*Головна*/
+
+.section-main {
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 80px;
+    position: relative;
+    background: url("../img/back-img.png") no-repeat top center;
+    background-position: center 200px;
+    height: 1170px;
+}
+
+.section-main h1 {
+    margin-bottom: 15px;
+    font-weight: 400;
+    font-size: 50px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.section-main p, .section-ai p,
+.section-notes p, .section-read p {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 28px;
+    color: rgba(239, 237, 253, 0.7);
+}
+
+.badge {
+    display: inline-block;
+    color: #fff;
+    padding: 10px 25px;
+    margin-bottom: 20px;
+    background: linear-gradient(90deg, rgba(229, 156, 255, 0.24) 0.01%, rgba(186, 156, 255, 0.24) 50.01%, rgba(156, 178, 255, 0.24) 100%);
+    border-radius: 32px;
+    position: relative;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.badge i{
+    margin-right: 30px;
+}
+
+/*Особливості*/
+
+.features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto 100px;
+}
+
+.feature-item {
+    color: white;
+    width: 300px;
+    padding: 32px 32px 38px;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: transparent;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 24.33%, rgba(255, 255, 255, 0.08) 49.55%, rgba(255, 255, 255, 0.08) 74.78%, rgba(255, 255, 255, 0.03) 100%) 1;
+}
+
+.feature-item h3 {
+    margin-top: 20px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F4F0FF;
+}
+
+.feature-item p {
+    margin-top: 6px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(239, 237, 253, 0.6);
+}
+
+.icon {
+    font-size: 40px;
+    color: #FFFFFF;
+}
+
+/*Нотатки з помічником*/
+
+.section-ai, .section-read {
+    text-align: center;
+    padding: 20px 20px;
+    margin-top: 80px;
+    position: relative;
+    background: url("../img/back-img2.png") no-repeat top center;
+    background-position: center 120px;
+    height: 835px;
+}
+
+.section-ai h2, .section-notes h2,
+.section-read h2, .section-integration h2 {
+    margin-bottom: 15px;
+    font-size: 30px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.transparent-block {
+    position: absolute;
+    top: 400px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    min-height: 140px;
+    max-width: 573px;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.01);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: inset 0 0 0 9px rgba(255, 255, 255, 0.03);
+    border-radius: 24px;
+    color: #FFFFFF;
+    backdrop-filter: blur(7px);
+    padding: 40px 50px 35px;
+    text-align: left;
+}
+
+.transparent-block h3 {
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+.transparent-block ul li{
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 24px;
+}
+
+.btn-magic {
+    position: fixed;
+    top: 25px;
+    right: 35px;
+    font-size: 13px;
+    background: linear-gradient(90deg, #FC72FF 0%, #8F68FF 25%, #487BFF 50%, #2CD9FF 75%, #2CFFCC 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.btn-magic i{
+    margin-right: 5px;
+}
+
+.section-ai-work {
+    z-index: 101;
+    position: relative;
+    padding: 0 20px;
+}
+
+.section-ai-work h2 {
+    text-align: center;
+    font-size: 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin: -120px 0 40px;
+}
+
+.section-ai-work .features {
+    max-width: 950px;
+    text-align: center;
+}
+
+/*Про нотатки*/
+
+.notes-s {
+    background: none;
+    height: 100%;
+}
+
+.block-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 48px;
+}
+
+.card-notes {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 18px;
+    padding: 32px;
+    max-width: 468px;
+    min-height: 384px;
+    width: 100%;
+    text-align: left;
+    background: radial-gradient(100% 146.88% at 50% 50%, rgba(255, 255, 255, 0.07) 0%, rgba(3, 0, 20, 0) 100%);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 24.33%, rgba(255, 255, 255, 0.08) 49.55%, rgba(255, 255, 255, 0.08) 74.78%, rgba(255, 255, 255, 0.03) 100%) 1;
+}
+
+.card-notes p {
+    font-size: 16px;
+    line-height: 24px;
+    max-width: 343px;
+}
+
+.card-notes p span {
+    font-weight: 600;
+    color: #F4F0FF;
+}
+
+/* Секція дослідження*/
+
+.section-read {
+    background: url("../img/back-img3.png") no-repeat top center;
+    background-position: center 1px;
+    padding: 600px 20px 150px;
+    height: 100%;
+}
+
+.section-read .features {
+    margin-top: 50px;
+}
+
+.section-read .features .feature-item {
+    max-width: 440px;
+    width: 100%;
+}
+
+/* Секція з кодуванням*/
+
+.section-numbers {
+    background: url("../img/icon.png") no-repeat top center;
+    background-position: center 1px;
+    padding: 200px 20px;
+    height: 100%;
+}
+
+/* Секція зустрічі*/
+
+.section-meets {
+    background: url("../img/back-img4.png") no-repeat top center;
+    padding: 300px 20px 200px;
+}
+
+.img-calendar {
+    height: 600px;
+    background: url("../img/calendsr.png") no-repeat center top;
+}
+
+/* Секція інтеграції*/
+
+.section-integration {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-integration .features {
+    max-width: 980px;
+    margin-top: 40px;
+}
+
+.section-integration .features .feature-item{
+    width: 468px;
+    height: 219px;
+    background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.03) 0%, rgba(3, 0, 20, 0) 100%);
+}
+
+.section-integration .features .feature-item:nth-child(1),
+.section-integration .features .feature-item:nth-child(4) {
+    background: radial-gradient(100% 100% at 50% 50%, rgba(255, 255, 255, 0.08) 0%, rgba(3, 0, 20, 0) 100%);
+}
+
+/*План*/
+
+.section-plan {
+    background: url("../img/back-img6.png") no-repeat top center;
+    background-position: center 300px;
+    height: 1140px;
+}
+
+.pricing-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 48px;
+    margin-top: 68px;
+}
+
+.pricing-block h3 {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(239, 237, 253, 0.6);
+    text-align: left;
+}
+
+.pricing-block .price {
+    font-weight: 400;
+    font-size: 70px;
+    line-height: 80px;
+    background: linear-gradient(90.01deg, #E59CFF 0.01%, #BA9CFF 50.01%, #9CB2FF 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-right: 15px;
+}
+
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 565px;
+    list-style: none;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F4F0FF;
+    gap: 24px;
+}
+
+.features-list li {
+    width: 270px;
+    text-align: left;
+    position: relative;
+    padding-left: 40px;
+}
+
+.features-list li::before {
+    content: "■";
+    position: absolute;
+    left: 0;
+    color: #F3EEFF;
+    display: flex;
+    justify-content: center;
+    font-size: 6px;
+    transform: rotate(45deg);
+    width: 24px;
+    height: 24px;
+    border-radius: 100px;
+    border: 1px solid rgba(243, 238, 255, 0.06);
+    background: linear-gradient(180deg, rgba(243, 238, 255, 0) 0%, rgba(243, 238, 255, 0.08) 100%);
+}
+
+.trial-button {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F4F0FF;
+    text-decoration: none;
+    padding: 10px 16px;
+    transition: background-color 0.3s ease;
+    box-shadow: inset 0 0 12px rgba(191, 151, 255, 0.24);
+    backdrop-filter: blur(4px);
+    border-radius: 8px;
+    background: linear-gradient(180deg, rgba(207, 184, 255, 0.24) 0%, rgba(207, 184, 255, 0) 100%), rgba(207, 184, 255, 0.32);
+}
+
+/* Секція коментарі*/
+
+.section-comments {
+    background: url("../img/back-img7.png") no-repeat top center;
+    padding: 40px 20px 200px;
+}
+
+/* Коментарі */
+
+.comments-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 48px;
+    max-width: 1480px;
+}
+
+.comment-card {
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    background: url("../img/coment-fon.png") no-repeat center / cover;
+    max-width: 480px;
+    width: 100%;
+    height: 280px !important;
+    text-align: left;
+    padding: 24px 28px;
+}
+
+.commentator {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 26px;
+}
+
+.commentator p {
+    font-size: 14px !important;
+    line-height: 20px !important;
+    color: rgba(239, 237, 253, 0.6) !important;
+}
+
+.commentator h3 {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    color: #F4F0FF;
+}
+
+.commentator img{
+    width: 44px;
+    height: 44px;
+}
+
+.comment-card p {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: rgba(239, 237, 253, 0.7);
+}
+
+.purple {
+    color: #9382FF;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: #d19eff !important;
+}
+
+
+/*Про нас*/
+
+.section-about {
+    background: url("../img/back-img8.png") no-repeat top center;
+    height: 664px;
+    background-position: center 100px;
+}
+
+.view-btn {
+    display: inline-block;
+    background: linear-gradient(180deg, rgba(243, 238, 255, 0.05) 0%, rgba(243, 238, 255, 0.04) 100%), rgba(147, 130, 255, 0.03);
+    box-shadow: inset 0 0 12px rgba(255, 255, 255, 0.08);
+    border-radius: 8px;
+    border: 1px solid rgba(243, 238, 255, 0.08);
+    font-size: 14px;
+    line-height: 20px;
+    color: #F4F0FF;
+    text-decoration: none;
+    padding: 10px 20px;
+    margin-top: 40px;
+}
+
+/*Академія*/
+
+.section-academy {
+    background: url("../img/back-img9.png") no-repeat top center;
+    padding: 135px 20px;
+}
+
+.info-game {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    color: rgba(239, 237, 253, 0.32);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 190px;
+}
+
+.info-game img {
+    margin: 0 4px;
+}
+
+/*Почніть роботу*/
+
+.section-work {
+    background: url("../img/back-img10.png") no-repeat top center;
+    height: 660px;
+    background-position: center 100px;
+}
+
+.section-work .trial-button{
+    margin-top: 32px;
+}
+
+/*Футер*/
+
+.footer {
+    background: radial-gradient(50% 44.06% at 50% 50%, rgba(147, 130, 255, 0.08) 0%, rgba(147, 130, 255, 0) 100%), #030014;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 80px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-bottom: 1px solid #1a1a2e;
+    padding-bottom: 90px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.footer-column {
+    margin-right: 40px;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-column h3 {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+    color: #F4F0FF;
+    margin-bottom: 20px;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 20px;
+}
+
+.footer-column ul li a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.footer-column ul li a:hover {
+    color: #fff;
+}
+
+.footer-newsletter {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 55px 0;
+    border-bottom: 1px solid #1a1a2e;
+}
+
+.footer-newsletter h3 {
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 32px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(255, 255, 255, 0.7) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: 8px;
+}
+
+.footer-newsletter p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(239, 237, 253, 0.7);
+}
+
+.footer-newsletter form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin: 20px 0 0;
+}
+
+.footer-newsletter input {
+    border: 2px solid rgba(243, 238, 255, 0.1);
+    border-radius: 8px;
+    padding: 10px 13px;
+    background: transparent;
+    color: #fff;
+    font-size: 14px;
+    width: 284px;
+}
+
+.footer-newsletter a {
+    margin: 0;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 55px 0;
+}
+
+.footer-bottom p, .footer-bottom p a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: rgba(239, 237, 253, 0.6);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-bottom span {
+    font-size: 3px;
+}
+
+/* Сторінка Ціни */
+
+.pricing {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #030014;
+    color: #fff;
+}
+
+.pricing h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.pricing p {
+    font-size: 18px;
+    color: rgba(239, 237, 253, 0.7);
+    margin-bottom: 40px;
+}
+
+.pricing-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.pricing-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(3, 0, 20, 0.1) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    padding: 30px 20px;
+    width: 300px;
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.pricing-card h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.pricing-card p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.pricing-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.pricing-card ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.pricing-card .btn-trial {
+    background-color: #6D5A99;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.pricing-card .btn-trial:hover {
+    background-color: #c088ff;
+}
+
+.faq {
+    padding: 50px 0;
+}
+
+.faq h2 {
+    font-size: 36px;
+    color: #F3EEFF;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.faq-item {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.faq-item h3 {
+    font-size: 22px;
+    color: #6D5A99;
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    font-size: 16px;
+    color: #aaaaaa;
+    line-height: 1.6;
+}
+
+/* Сторінка Блог*/
+
+.blog .card-notes {
+    min-height: 200px;
+}
+
+/* Сторінка Компанія */
+
+.section-team {
+    background: none;
+    padding: 0 0 100px;
+}
+
+.team-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.team-member {
+    width: 250px;
+    text-align: center;
+    padding: 20px;
+    background: radial-gradient(100% 146.88% at 50% 50%, rgba(255, 255, 255, 0.07) 0%, rgba(3, 0, 20, 0) 100%);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 24.33%, rgba(255, 255, 255, 0.08) 49.55%, rgba(255, 255, 255, 0.08) 74.78%, rgba(255, 255, 255, 0.03) 100%) 1;
+    color: #F3EEFF;
+    margin: 50px 0 0;
+}
+
+.team-member img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.team-member h3 {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.team-member p {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.social-links a {
+    margin: 0 10px;
+    font-size: 1.5rem;
+}
+
+.social-links a i {
+    color: #6D5A99 !important;
+}
+
+/* Стилі для секції досягнень */
+
+.section-achievements  {
+    background: none;
+    height: 100%;
+}
+
+.section-achievements ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 0;
+}
+
+.section-achievements li {
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+    max-width: 350px;
+    width: 100%;
+    color: #F3EEFF;
+    background: radial-gradient(100% 146.88% at 50% 50%, rgba(255, 255, 255, 0.07) 0%, rgba(3, 0, 20, 0) 100%);
+    border: 1px solid transparent;
+    border-image: linear-gradient(90deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 24.33%, rgba(255, 255, 255, 0.08) 49.55%, rgba(255, 255, 255, 0.08) 74.78%, rgba(255, 255, 255, 0.03) 100%) 1;
+}
+
+.section-achievements li:hover {
+    transform: translateY(-5px);
+}
+
+.section-notfound {
+    background-position: center 0;
+    padding: 100px 0;
+}
+
+@media (min-width: 768px) {
+    .menu {
+        display: flex;
+        flex-direction: row;
+        position: static;
+        padding: 11px 25px;
+        gap: 28px;
+        transform: translateX(0);
+        background: rgba(255, 255, 255, 0.05);
+        border-radius: 999px;
+    }
+    .menu li {
+        padding: 0;
+        margin: 0 10px;
+    }
+    .burger {
+        display: none;
+    }
+    .btn-block a:first-child {
+        margin-right: 23px;
+    }
+    .section-main {
+        text-align: center;
+        padding: 20px 20px;
+        margin-top: 80px;
+        position: relative;
+        background: url("../img/back-img.png") no-repeat top center;
+        background-position: center 0;
+        height: 1170px;
+    }
+    .section-main h1 {
+        font-size: 72px;
+        line-height: 80px;
+    }
+    .section-ai h2, .section-notes h2,
+    .section-read h2, .section-integration h2 {
+        font-size: 56px;
+        line-height: 64px;
+    }
+    .section-ai-work h2 {
+        font-size: 32px;
+        line-height: 40px;
+    }
+    .comment-card {
+        min-height: 212px;
+        height: 100% !important;
+    }
+    .footer-links {
+        flex-direction: row;
+        gap: 120px;
+    }
+    .footer-newsletter form {
+        margin: 0;
+    }
+}
+
+@media (min-width: 951px) {
+    .section-integration .features {
+        background: url("../img/back-img5.png") no-repeat center top;
+        padding: 10px 0 0 0;
+    }
+}

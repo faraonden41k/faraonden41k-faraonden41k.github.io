@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reflect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <meta name="description" content="Сайт-візитка додатку організації робочих нотаток">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+    <div id="trialModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Спробуйте Reflect</h2>
+            <p>Заповніть форму, щоб спробувати Reflect зараз!</p>
+            <form>
+                <input type="text" placeholder="Ваше ім'я" required><br>
+                <input type="email" placeholder="Ваш email" required><br>
+                <button type="submit" class="btn-submit">Подати заявку</button>
+            </form>
+        </div>
+    </div>
+    <header>
+        <a href="#" class="logo">
+            <img src="img/logo.png" alt="Reflect Logo">
+        </a>
+        <nav>
+            <ul class="menu" id="menu">
+                <li><a href="#">Головна</a></li>
+                <li><a href="price.html">Ціни</a></li>
+                <li><a href="company.html">Компанія</a></li>
+                <li><a href="blog.html">Блог</a></li>
+            </ul>
+        </nav>
+        <div class="btn-block">
+            <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+            <a href="#" class="btn-trial" id="openModal">Спробуй</a>
+        </div>
+        <div class="burger" id="burger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </header>
+    <section class="section-main">
+        <div class="badge"><i class="fa-solid fa-star"></i> Нове: наша інтеграція AI</div>
+        <h1>Думайте краще з Reflect</h1>
+        <p>Ніколи не пропустіть жодної замітки, ідеї чи зв’язку.</p>
+    </section>
+    <section class="features">
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-cloud"></i>
+            </div>
+            <h3>Швидкість</h3>
+            <p>Миттєво синхронізуйте свої нотатки</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <h3>Мережеві нотатки</h3>
+            <p>Допомогою зворотніх посилань</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-mobile"></i>
+            </div>
+            <h3>iOS додаток</h3>
+            <p>Зберігайте ідеї в дорозі або офлайн</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-lock"></i>
+            </div>
+            <h3>Наскрізне шифрування</h3>
+            <p>Тільки ви маєте доступ до своїх нотаток</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-calendar"></i>
+            </div>
+            <h3>Інтеграція календаря</h3>
+            <p>Відстежуйте зустрічі та порядок денний</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-edit"></i>
+            </div>
+            <h3>Видавництво</h3>
+            <p>Поділіться всім, що напишете, одним натиском</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-book-open"></i>
+            </div>
+            <h3>Миттєве захоплення</h3>
+            <p>Зберігайте фрагменти з браузера та Kindle</p>
+        </div>
+        <div class="feature-item">
+            <div class="icon">
+                <i class="fa-solid fa-search"></i>
+            </div>
+            <h3>Пошук</h3>
+            <p>Легко згадуйте минулі нотатки</p>
+        </div>
+    </section>
+    <section class="section-ai">
+        <div class="badge">Reflect AI</div>
+        <h2>Нотатки з помічником AI</h2>
+        <p>Reflect використовує GPT-4 і Whisper від OpenAI,
+            щоб покращити <br>ваше письмо та упорядкувати ваші думки.</p>
+        <div class="transparent-block">
+            <h3>Як використовувати AI, щоб робити нотатки</h3>
+            <ul>
+                <li>Що можуть зробити LLM, такі як GPT, для нотаток?</li>
+            </ul>
+            <a href="#" class="btn-magic"><i class="fa-solid fa-star"></i> Побачити магію</a>
+        </div>
+    </section>
+    <section class="section-ai-work">
+        <h2>Що ви можете робити з Reflect AI?</h2>
+        <div class="features">
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-microphone"></i>
+                </div>
+                <h3>Читати голосові нотатки
+                    з точністю</h3>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-clipboard-list"></i>
+                </div>
+                <h3>Створюйте нариси статті зі
+                    своїх розрізнених думок</h3>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-sheet-plastic"></i>
+                </div>
+                <h3>Перерахуйте ключові висновки
+                    з нотаток зустрічі</h3>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-spell-check"></i>
+                </div>
+                <h3>Виправте граматику та
+                    покращте своє письмо</h3>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-sd-card"></i>
+                </div>
+                <h3>Збережіть <br>власні підказки</h3>
+            </div>
+        </div>
+    </section>
+    <section class="section-ai notes-s">
+        <div class="badge">Усі нотатки підключено</div>
+        <h2>Подаруйте своєму мозку надздібності</h2>
+        <p>Відображайте те, як працює ваш розум, зв’язуючи нотатки
+            за допомогою зворотних <br> посилань. Reflect створює ваш
+            другий мозок, до якого ви можете звернутися будь-коли.</p>
+        <div class="block-cards">
+            <div class="card-notes">
+                <img src="img/lines.png" alt="img">
+                <i class="fa-regular fa-images" style="color: #ffffff;"></i>
+                <p><span>Ваші думки пов'язані.</span>
+                    Зворотні посилання
+                    на нотатки, щоб було легко знайти.
+                </p>
+            </div>
+            <div class="card-notes">
+                <i class="fa-solid fa-magnifying-glass" style="color: #ffffff;"></i>
+                <p><span>Захоплення думки. </span>
+                    Записуйте свої ідеї
+                    тому ви ніколи нічого не пропустите.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-read">
+        <div class="badge">Дослідження та читання</div>
+        <h2>Ніколи не втрачайте інформацію</h2>
+        <p>Зберіть свої веб-фрагменти, основні моменти Kindle
+            і важливі посилання – <br> все в одному місці. Потім
+            швидко знайдіть їх знову з будь-якого пристрою.</p>
+        <div class="features">
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-computer"></i>
+                </div>
+                <h3>Інтегровано з пристроями</h3>
+                <p>Ми всюди, будь то мобільний чи
+                    настільний, онлайн чи офлайн.</p>
+            </div>
+            <div class="feature-item">
+                <div class="icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Надійно, але відкрито</h3>
+                <p>Наскрізне шифрування забезпечує
+                    безпеку ваших нотаток.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="section-read section-numbers">
+        <div class="badge">nw7L4B2NL</div>
+        <h2>gKL32xw axRVaRR</h2>
+        <p>Як mgnOr04 j wqe 2YvI HQ 17bjjb1b4 HA KOeTkABeMDBYV
+            <br>o g8NXdDl37 E QM xtH 06 zw1 W2q</p>
+    </section>
+    <section class="section-read section-meets">
+        <div class="badge">Зустрічі</div>
+        <h2>Отримайте більше від <br> зустрічей</h2>
+        <p>Відстежуйте всі ваші зустрічі та те, що обговорювалося.
+            <br>Швидко імпортуйте події за допомогою інтеграції
+            Календаря Google і Outlook.</p>
+        <div class="img-calendar"></div>
+    </section>
+    <section class="section-integration">
+        <div class="badge">Інтеграції</div>
+        <h2>Використовуйте Reflect <br>
+            з іншими програмами</h2>
+        <div class="features">
+            <div class="feature-item">
+                <img src="img/brand1.png" alt="img">
+                <h3>Zapier</h3>
+                <p>Підключайтеся за допомогою Reflect
+                    із десятками додатків без коду</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/brand2.png" alt="img">
+                <h3>Readwise</h3>
+                <p>Синхронізуйте виділення
+                    та нотатки з Reflect.</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/brand3.png" alt="img">
+                <h3>Google and Outlook</h3>
+                <p>Інтегруйте свої контакти та календарі</p>
+            </div>
+            <div class="feature-item">
+                <img src="img/brand4.png" alt="img">
+                <h3>Chrome and Safari</h3>
+                <p>Зберігайте веб-кліпи та
+                    синхронізуйте їх із Kindle</p>
+            </div>
+        </div>
+    </section>
+    <section class="section-ai section-plan">
+        <div class="badge">Отримати доступ</div>
+        <h2>Нам подобається все просто.
+            <br>Найкращий план – нижча ціна.</h2>
+        <div class="pricing-block">
+            <h3><span class="price">$10</span>/місяць <br> (стягується щорічно)</h3>
+            <ul class="features-list">
+                <li>Нотатування в мережі</li>
+                <li>Наскрізне шифрування</li>
+                <li>Веб-кліпер Chrome і Safari</li>
+                <li>Офлайн-синхрон Kindle</li>
+                <li>Синхронізація Kindle</li>
+                <li>iOS додаток</li>
+            </ul>
+            <a href="#" class="trial-button">14-денів безкоштовно</a>
+        </div>
+    </section>
+    <section class="section-read section-comments">
+        <div class="badge">Стіна кохання</div>
+        <h2>Улюблений мислителями</h2>
+        <p>Ось що люди говорять про нас</p>
+        <div class="comments-block swiper">
+            <div class="swiper-wrapper">
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men.png" alt="img">
+                        <div>
+                            <h3>Райан Делк</h3>
+                            <p>@delk</p>
+                        </div>
+                    </div>
+                    <p>Не віднімайте це від мене:
+                        <span class="purple">@reflectnotes</span> — це магія.</p>
+                </div>
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men2.png" alt="img">
+                        <div>
+                            <h3>Шон Роуз</h3>
+                            <p>@seanrose</p>
+                        </div>
+                    </div>
+                    <p>Наразі дуже, дуже подобається
+                        <span class="purple">@reflectnotes</span>. Це просто
+                        потрібну кількість простих/швидких для особистих нотаток
+                        і виконує більшу частину важкої роботи з організації в
+                        фон.</p>
+                </div>
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men3.png" alt="img">
+                        <div>
+                            <h3>Деметрія Джайлз</h3>
+                            <p>@drosewritings</p>
+                        </div>
+                    </div>
+                    <p>
+                        Граємося з <span class="purple">@reflectnotes</span>.
+                        Я повернувся до реєстраційного ключа
+                        думки, деталі та звукові фрагменти з епізодів, книг,
+                        зустрічі, статті тощо за минулий тиждень.</p>
+                </div>
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men4.png" alt="img">
+                        <div>
+                            <h3>Джеремі МакПік</h3>
+                            <p>@jwmcpeak</p>
+                        </div>
+                    </div>
+                    <p>Я щойно отримав запрошення до <span class="purple">@reflectnotes</span>,
+                        і о боже! Це добре продумано, і я бачу, що це моя замітка -
+                        беручи платформу вперед. молодець! я шукаю
+                        дивіться, як прогресує програма.</p>
+                </div>
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men5.png" alt="img">
+                        <div>
+                            <h3>Фабріціо Рінальді</h3>
+                            <p>@linuz90</p>
+                        </div>
+                    </div>
+                    <p>Я тримаю <span class="purple">@reflectnotes</span>
+                        відкритим *увесь* час, і я використання як для
+                        простого журналювання, так і для написання довгих
+                        форм. Рідко можна побачити, як одна програма так добре
+                        працює для обох.</p>
+                </div>
+                <div class="comment-card swiper-slide">
+                    <div class="commentator">
+                        <img src="img/men6.png" alt="img">
+                        <div>
+                            <h3>Джонатан Сімко</h3>
+                            <p>@jdsimcoe</p>
+                        </div>
+                    </div>
+                    <p>Все правильно. Я маю віддати величезне вітання
+                        <span class="purple">@maccaw</span> за новаторство <span class="purple">@reflectnotes</span>.
+                        Швидкість, фокус і увага до деталей (особливо
+                        ідеальних фрагментів структурованих даних) чудові.</p>
+                </div>
+            </div>
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </section>
+    <section class="section-ai section-about">
+        <div class="badge">Про</div>
+        <h2>Ми інді-команда, <br> розсіяна по всьому світу</h2>
+        <p>Наша місія полягає в тому, щоб покращити спосіб
+            <br>мислення людей, створивши чудову програму для нотаток.</p>
+        <a href="#" class="view-btn">Переглянути</a>
+    </section>
+    <section class="section-ai section-academy">
+        <div class="badge">Академія</div>
+        <h2>Навчіться робити чудові <br> нотатки в нашій академії</h2>
+        <p>Опануйте принципи ведення нотаток у безкоштовній
+            <br> онлайн-академії Reflect.</p>
+        <a href="#" class="view-btn">Пройти курс</a>
+        <div class="info-game">
+            Натисніть «Керування», щоб грати:
+            <img src="img/btn1.png" alt="img">
+            <img src="img/btn2.png" alt="img">
+            <img src="img/btn3.png" alt="img">
+            <img src="img/btn4.png" alt="img">
+            Обертати
+            <img src="img/btn2.png" alt="img">
+            Падай швидше:
+            <img src="img/btn3.png" alt="img">
+        </div>
+    </section>
+    <section class="section-ai section-work">
+        <div class="badge">Почніть роботу</div>
+        <h2>Думайте краще з Reflect</h2>
+        <p>Ніколи не пропустіть жодної замітки, ідеї чи зв’язку.</p>
+        <a href="#" class="trial-button">14-днів безкоштовно</a>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <img src="img/logo.png" alt="Reflect Logo">
+                    <div class="footer-social">
+                        <a href="#"><i class="fa-brands fa-discord" style="color: #4C485E;"></i></a>
+                        <a href="#"><i class="fa-brands fa-twitter" style="color: #4C485E;"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h3>Продукти</h3>
+                        <ul>
+                            <li><a href="#">Особливості</a></li>
+                            <li><a href="#">Інтеграції</a></li>
+                            <li><a href="#">Ціни</a></li>
+                            <li><a href="#">Журнал змін</a></li>
+                            <li><a href="#">Шлях</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Компанія</h3>
+                        <ul>
+                            <li><a href="#">Наша команда</a></li>
+                            <li><a href="#">Наші числа</a></li>
+                            <li><a href="#">Блог</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-column">
+                        <h3>Ресурси</h3>
+                        <ul>
+                            <li><a href="#">Завантаження</a></li>
+                            <li><a href="#">Документація</a></li>
+                            <li><a href="#">Контакти</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-newsletter">
+                <div>
+                    <h3>Приєднуйтесь до нашої розсилки</h3>
+                    <p>Будьте в курсі всього Reflect</p>
+                </div>
+                <form>
+                    <input type="email" placeholder="Введіть емейл">
+                    <a href="#" class="view-btn">Підписатися</a>
+                </form>
+            </div>
+            <div class="footer-bottom">
+                <p><a href="#">Privacy Policy</a><span>&#9679;</span><a href="#">Terms of Conditions</a></p>
+                <p>Reflect App, LLC. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

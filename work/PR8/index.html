@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Нерухомість</title>
+    <link rel="stylesheet" href="/work/PR8/style.css" />
+    <script src="scripts.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Нерухомість</h1>
+      <div id="cart-icon" onclick="toggleCart()">
+        🏠 <span id="cart-count">0</span>
+      </div>
+    </header>
+
+    <main class="property-list">
+      <article class="property">
+        <div class="property-label">Новинка</div>
+        <img
+          src="https://via.placeholder.com/250"
+          alt="Квартира в центрі міста"
+        />
+        <h2>Квартира в центрі міста</h2>
+        <p>2,500,000 грн</p>
+        <button onclick="addToCart('Квартира в центрі міста', 2500000)">
+          Додати до обраного
+        </button>
+      </article>
+
+      <article class="property">
+        <div class="property-label hit">Хіт продажу</div>
+        <img src="https://via.placeholder.com/250" alt="Будинок у передмісті" />
+        <h2>Будинок у передмісті</h2>
+        <p>3,800,000 грн</p>
+        <button onclick="addToCart('Будинок у передмісті', 3800000)">
+          Додати до обраного
+        </button>
+      </article>
+
+      <article class="property">
+        <div class="property-label">Елітна</div>
+        <img src="https://via.placeholder.com/250" alt="Вілла з басейном" />
+        <h2>Вілла з басейном</h2>
+        <p>10,000,000 грн</p>
+        <button onclick="addToCart('Вілла з басейном', 10000000)">
+          Додати до обраного
+        </button>
+      </article>
+
+      <article class="property">
+        <div class="property-label">Новинка</div>
+        <img src="https://via.placeholder.com/250" alt="Будинок у горах" />
+        <h2>Будинок у горах</h2>
+        <p>4,500,000 грн</p>
+        <button onclick="addToCart('Будинок у горах', 4500000)">
+          Додати до обраного
+        </button>
+      </article>
+
+      <article class="property">
+        <div class="property-label hit">Хіт продажу</div>
+        <img src="https://via.placeholder.com/250" alt="Таунхаус" />
+        <h2>Таунхаус</h2>
+        <p>3,200,000 грн</p>
+        <button onclick="addToCart('Таунхаус', 3200000)">
+          Додати до обраного
+        </button>
+      </article>
+
+      <article class="property">
+        <div class="property-label">Елітна</div>
+        <img src="https://via.placeholder.com/250" alt="Котедж біля озера" />
+        <h2>Котедж біля озера</h2>
+        <p>6,800,000 грн</p>
+        <button onclick="addToCart('Котедж біля озера', 6800000)">
+          Додати до обраного
+        </button>
+      </article>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Reflect</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="./img/favicon.png" sizes="16x16">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/x-icon">
+    <meta name="description" content="Сайт-візитка додатку організації робочих нотаток">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+</head>
+<body>
+<div id="trialModal" class="modal">
+    <div class="modal-content">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <h2>Спробуйте Reflect</h2>
+        <p>Заповніть форму, щоб спробувати Reflect зараз!</p>
+        <form>
+            <input type="text" placeholder="Ваше ім'я" required><br>
+            <input type="email" placeholder="Ваш email" required><br>
+            <button type="submit" class="btn-submit">Подати заявку</button>
+        </form>
+    </div>
+</div>
+<header>
+    <a href="index.html" class="logo">
+        <img src="img/logo.png" alt="Reflect Logo">
+    </a>
+    <nav>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Головна</a></li>
+            <li><a href="price.html">Ціни</a></li>
+            <li><a href="company.html">Компанія</a></li>
+            <li><a href="blog.html">Блог</a></li>
+        </ul>
+    </nav>
+    <div class="btn-block">
+        <a href="#"><i class="fa-solid fa-user" style="color: #ffffff;"></i></a>
+        <a href="#" class="btn-trial"  id="openModal">Спробуй</a>
+    </div>
+    <div class="burger" id="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</header>
+<section class="section-ai section-notfound">
+    <div class="badge">Ви заблукали</div>
+    <h2>404</h2>
+    <a href="index.html" class="trial-button">Головна</a>
+</section>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <img src="img/logo.png" alt="Reflect Logo">
+                <div class="footer-social">
+                    <a href="#"><i class="fa-brands fa-discord" style="color: #4C485E;"></i></a>
+                    <a href="#"><i class="fa-brands fa-twitter" style="color: #4C485E;"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <h3>Продукти</h3>
+                    <ul>
+                        <li><a href="#">Особливості</a></li>
+                        <li><a href="#">Інтеграції</a></li>
+                        <li><a href="#">Ціни</a></li>
+                        <li><a href="#">Журнал змін</a></li>
+                        <li><a href="#">Шлях</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Компанія</h3>
+                    <ul>
+                        <li><a href="#">Наша команда</a></li>
+                        <li><a href="#">Наші числа</a></li>
+                        <li><a href="#">Блог</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>Ресурси</h3>
+                    <ul>
+                        <li><a href="#">Завантаження</a></li>
+                        <li><a href="#">Документація</a></li>
+                        <li><a href="#">Контакти</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="footer-newsletter">
+            <div>
+                <h3>Приєднуйтесь до нашої розсилки</h3>
+                <p>Будьте в курсі всього Reflect</p>
+            </div>
+            <form>
+                <input type="email" placeholder="Введіть емейл">
+                <a href="#" class="view-btn">Підписатися</a>
+            </form>
+        </div>
+        <div class="footer-bottom">
+            <p><a href="#">Privacy Policy</a><span>&#9679;</span><a href="#">Terms of Conditions</a></p>
+            <p>Reflect App, LLC. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
+
+<script src="script/script.js"></script>
+</body>
+</html>
