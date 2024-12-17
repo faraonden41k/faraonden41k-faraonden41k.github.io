@@ -41,7 +41,7 @@ a {
 }
 
 #start {
-  background-image: url(\img\back-start.png);
+  background-image: url(/img/back-start.png);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
